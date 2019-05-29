@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "ThemGiaoVien";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutMain.cshtml";
+}
+<div class="section__content section__content--p30">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3 class="text-center title-2">Thêm mới</h3>
+                        </div>
+                        <hr>
+                        <form action="" method="post" novalidate="novalidate">
+                            <div class="form-group">
+                                <label for="cc-payment" class="control-label mb-1">Họ và tên</label>
+                                <input id="cc-pament" name="cc-payment" type="text" class="form-control" data-val-required="Nhập họ và tên">
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="selectLg" class=" form-control-label">Trình độ</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="selectLg" id="selectLg" class="form-control-lg form-control">
+                                        <option value="0">Chọn</option>
+                                        <option value="1">Cử nhân</option>
+                                        <option value="2">Thạc sĩ</option>
+                                        <option value="3">Tiến sĩ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-exp" class="control-label mb-1">Ngày sinh</label>
+                                <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Nhập ngày sinh"
+                                       placeholder="YY / MM / DD"
+                                       autocomplete="cc-exp">
+                                <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="selectLg" class=" form-control-label">Giới tính</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="selectLg" id="selectLg" class="form-control-lg form-control">
+                                        <option value="0">Nam</option>
+                                        <option value="1">Nữ</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="email-input" class=" form-control-label">Email</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="email" id="email-input" name="email-input" placeholder="" class="form-control">
+                                    <small class="help-block form-text"></small>
+                                </div>
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="cc-name" class="control-label mb-1">Nơi ở</label>
+                                <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Nhập nơi ở"
+                                       autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-number" class="control-label mb-1">SĐT</label>
+                                <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                       data-val-required="Please enter the card number" data-val-cc-number="Nhập số điện thoại"
+                                       autocomplete="cc-number">
+                                <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-payment" class="control-label mb-1">Giới thiệu</label>
+                                <input id="cc-pament" name="cc-payment" type="text" class="form-control" data-val-required="Nhập giới thiệu">
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="file-input" class=" form-control-label">Ảnh đại diện</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nf-email" class=" form-control-label">Tên người dùng</label>
+                                <input type="email" id="nf-email" name="nf-email" placeholder="" class="form-control">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="nf-password" class=" form-control-label">Mật khẩu</label>
+                                <input type="password" id="nf-password" name="nf-password" placeholder="" class="form-control">
+                                <span class="help-block"></span>
+                            </div>
+                            <div>
+                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-sm">
+                                    <!--<i class="fa fa-lock fa-lg"></i>&nbsp;-->
+                                    <span id="payment-button-amount">Thêm</span>
+                                    <span id="payment-button-sending" style="display:none;">Sending…</span>
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm">
+                                    Hoàn tác
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm">Hủy</button>
+
+
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

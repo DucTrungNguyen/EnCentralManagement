@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa6a892d41524b458ced1234cc9ef74a" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="EnCentralModel.GIAO_VIEN" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.HOC_SINH" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.PHONG_HOC" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.PHU_HUYNH" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.sysdiagram" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.TKB_HOCSINH" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.TKB_LOP" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.TRINHDO_GIAOVIEN" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.TRINHDO_LOPHOC" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="EnCentralModel.FK__GIAO_VIEN__ID_TR__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="EnCentralModel.FK__GIAO_VIEN__ID_TR__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="EnCentralModel.FK__TKB_HOCSI__ID_HO__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="EnCentralModel.HOCSINH_PHUHUYNH" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EnCentralModel.LOP_HOC" Width="1.5" PointX="5.25" PointY="2.75" />
+        <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__ID_GIAO__06CD04F7" />
+        <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__ID_TKB__08B54D69" />
+        <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__MA_PHON__07C12930" />
+        <AssociationConnector Association="EnCentralModel.FK__TKB_HOCSI__ID_LO__0E6E26BF" />
+        <EntityTypeShape EntityType="EnCentralModel.CA_HOC" Width="1.5" PointX="10.375" PointY="4.875" />
+        <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__MA_CAHO__1AD3FDA4" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
