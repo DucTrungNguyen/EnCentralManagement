@@ -45,14 +45,14 @@
                                 var n = 0;
                         foreach (HOC_SINH hs in Model)
                                 {
-                        <tr class="tr-shadow" id= @(hs.ID)>
+                        <tr class="tr-shadow" id= "@(hs.ID)">
                             <td>
                                 <label class="au-checkbox">
                                     <input type="checkbox">
                                     <span class="au-checkmark"></span>
                                 </label>
                             </td>
-                            <td>@(n++)</td>
+                            <td>@(++n)</td>
                             <td>
                                 <img src="/Assets/images/icon/avatar-06.jpg" width="40" height="40" />
                             </td>
@@ -66,10 +66,10 @@
                             <td>@(hs.DIA_CHI)</td>
                             <td>
                                 <div class="table-data-feature">
-                                    <a href="@Url.Action("XemThongTinHocSinh", "QuanLyHocSinh")" class="item" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                    <a href="@Url.Action("XemThongTinHocSinh", "QuanLyHocSinh", new { id = hs.ID.ToString()  })" class="item" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
                                         <i class="zmdi zmdi-view-web"></i>
                                     </a>
-                                    <a href="@Url.Action("SuaHocSinh", "QuanLyHocSinh", new { id = 1 })" class="item" data-toggle="tooltip" data-placement="top" title="Sửa">
+                                    <a href="@Url.Action("SuaHocSinh", "QuanLyHocSinh", new { id = hs.ID.ToString() } )" class="item" data-toggle="tooltip" data-placement="top" title="Sửa">
                                         <i class="zmdi zmdi-edit"></i>
                                     </a>
                                     <button onclick="ConfirmToDelete()" class="item" data-toggle="tooltip" data-placement="top" title="Xoá">

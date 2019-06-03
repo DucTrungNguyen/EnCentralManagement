@@ -1,4 +1,6 @@
 ﻿
+@using EnCentralManagement.Areas.Admin.Models;
+@model HOC_SINH
 @{
     ViewBag.Title = "XemThongTinHocSinh";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutMain.cshtml";
@@ -153,4 +155,23 @@
 
         </div>
     </div>
+    @{
+        if(Model != null)
+        {
+            <script>
+                var dataJson = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                          {
+                              name = Model.HO_TEN,
+                              dob = Model.NGAY_SINH,
+                              sdt = Model.SO_DIENTHOAI,
+                              diachi = Model.DIA_CHI
+                          }));
+                function setInformation() {
+                    $
+                }
+                setInformation();
+
+            </script>
+        }
+    }
 </div>

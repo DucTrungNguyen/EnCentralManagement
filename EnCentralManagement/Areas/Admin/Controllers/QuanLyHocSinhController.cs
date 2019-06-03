@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EnCentralManagement.Areas.Admin.Models;
+using Newtonsoft.Json;
+
 namespace EnCentralManagement.Areas.Admin.Controllers
 {
     public class QuanLyHocSinhController : Controller
@@ -60,11 +62,13 @@ namespace EnCentralManagement.Areas.Admin.Controllers
         {
             ViewBag.action = Url.Action("SuaHocSinh", "QuanLyHocSinh",new { id= id });
             ViewBag.isThemHocSinh = false;
-            return View("ThemHocSinh");
+           
+            // hi hi :) nho nham param
+            return View("ThemHocSinh", db.HOC_SINH.Find(id));
         }
-        public ActionResult XemThongTinHocSinh()
+        public ActionResult XemThongTinHocSinh(string id)
         {
-            return View();
+            return View("XemThongTinHocSinh", db.HOC_SINH.Find(id));
         }
     }
 }

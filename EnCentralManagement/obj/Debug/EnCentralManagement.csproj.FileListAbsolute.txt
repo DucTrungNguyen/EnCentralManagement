@@ -75,6 +75,7 @@ F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.AI.WindowsServe
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.ApplicationInsights.dll
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.Web.Infrastructure.dll
+F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Newtonsoft.Json.dll
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Helpers.dll
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Mvc.dll
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Razor.dll
@@ -89,6 +90,7 @@ F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.AI.Web.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.AI.WindowsServer.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.ApplicationInsights.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\Newtonsoft.Json.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Razor.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Webpages.xml
 F:\ASP.Net\EnCentralManagement\EnCentralManagement\bin\System.Web.Webpages.Deployment.xml
