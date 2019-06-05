@@ -12,10 +12,20 @@
                     <div class="card-header"></div>
                     <div class="card-body">
                         <div class="card-title">
-                            <h3 class="text-center title-2">Thêm mới</h3>
+                            @{
+                                if (ViewBag.isThemPhuHuynh == true)
+                                {
+                                    <h3 class="text-center title-2">Thêm mới</h3>
+                                }
+                                else
+                                {
+                                    <h3 class="text-center title-2">Sửa thông tin phụ huynh</h3>
+                                }
+                            }
+
                         </div>
                         <hr>
-                        <form action="" method="post" novalidate="novalidate">
+                        <form action="@(ViewBag.action)" method="post" novalidate="novalidate">
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">Họ và tên</label>
                                 <input id="cc-pament" name="cc-payment" type="text" class="form-control" data-val-required="Nhập họ và tên">
@@ -82,12 +92,12 @@
                                     <input type="file" id="file-input" name="file-input" class="form-control-file">
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group create-only">
                                 <label for="nf-email" class=" form-control-label">Tên người dùng</label>
                                 <input type="email" id="nf-email" name="nf-email" placeholder="" class="form-control">
                                 <span class="help-block"></span>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group create-only">
                                 <label for="nf-password" class=" form-control-label">Mật khẩu</label>
                                 <input type="password" id="nf-password" name="nf-password" placeholder="" class="form-control">
                                 <span class="help-block"></span>
@@ -95,7 +105,17 @@
                             <div>
                                 <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-sm">
                                     <!--<i class="fa fa-lock fa-lg"></i>&nbsp;-->
-                                    <span id="payment-button-amount">Thêm</span>
+                                    @{
+                                        if (ViewBag.isThemPhuHuynh == true)
+                                        {
+                                            <span id="payment-button-amount">Thêm</span>
+                                        }
+                                        else
+                                        {
+                                            <span id="payment-button-amount">Sửa</span>
+                                        }
+                                    }
+
                                     <span id="payment-button-sending" style="display:none;">Sending…</span>
                                 </button>
                                 <button type="reset" class="btn btn-danger btn-sm">

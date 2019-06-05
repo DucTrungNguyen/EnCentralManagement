@@ -20,7 +20,7 @@
                                     <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="/Assets/images/icon/avatar-01.jpg">
                                 </a>
                                 <div class="media-body">
-                                    <h2 class="text-light display-6">Nguyễn Văn Bình</h2>
+                                    <h2 class="text-light display-6 name">Nguyễn Văn Bình</h2>
                                     <p>Học sinh</p>
                                 </div>
                             </div>
@@ -28,19 +28,19 @@
 
 
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                            <li class="list-group-item code">
                                 <a href="#">
-                                    Mã : CT010308
+                                    Mã : 
                                 </a>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item class">
                                 <a href="#">
-                                    Lớp : CT1C
+                                    Lớp : 
                                 </a>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item sex">
                                 <a href="#">
-                                    Giới tính : Nam
+                                    Giới tính : 
                                 </a>
                             </li>
                         </ul>
@@ -74,20 +74,20 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="card" style="margin: 10px;padding:10px">
                                 <div class="column">
-                                    <div class="user-profile">
-                                        Ngày sinh : 02/02/2000
+                                    <div class="user-profile dobHS-detail">
+                                        Ngày sinh : 
                                     </div>
                                     <br />
-                                    <div class="email">
-                                        Email : Nguyenbinh@gmail.com
+                                    <div class="email mailHS-detail">
+                                        Email : 
                                     </div>
                                     <br />
-                                    <div class="address">
-                                        Nơi ở : Hà Nội
+                                    <div class="address diachiHS-detail">
+                                        Nơi ở : 
                                     </div>
                                     <br />
-                                    <div class="number">
-                                        SĐT : 0169444995
+                                    <div class="number sdtHS-detail">
+                                        SĐT : 
                                     </div>
                                     <br />
 
@@ -98,24 +98,24 @@
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="card" style="margin: 10px;padding:10px">
                                 <div class="column">
-                                    <div class="user-profile">
-                                        Họ tên : Nguyễn Thành
+                                    <div class="user-profile namePH-detail">
+                                        Họ tên : 
                                     </div>
                                     <br />
                                     <div class="user-profile">
-                                        Quan hệ: Bố
+                                        Quan hệ:
                                     </div>
                                     <br />
-                                    <div class="email">
-                                        Email : Thanhnguyen01@gmail.com
+                                    <div class="email emailPH-detail">
+                                        Email : 
                                     </div>
                                     <br />
-                                    <div>
-                                        Địa chỉ : Hà Nội
+                                    <div class="diachiPH-detail">
+                                        Địa chỉ : 
                                     </div>
                                     <br />
-                                    <div class="number">
-                                        SĐT : 021332423
+                                    <div class="number sdtPH-detail">
+                                        SĐT : 
                                     </div>
 
 
@@ -164,12 +164,18 @@
                               name = Model.HO_TEN,
                               dob = Model.NGAY_SINH,
                               sdt = Model.SO_DIENTHOAI,
-                              diachi = Model.DIA_CHI
-                          }));
+                              diachi = Model.DIA_CHI,
+                              mail = Model.EMAIL
+                          }))
                 function setInformation() {
-                    $
+                    $(".name").val(dataJson.name);
+                    $(".dobHS-detail").val("Ngày sinh: " + dataJson.dob);
+                    $(".mailHS-detail").val("Email: " + dataJson.mail);
+                    $(".diachiHS-detail").val("Địa chỉ: " + dataJson.diachi)
+                    $(".sdtHS-detail").val("SĐT: " + dataJson.sdt)
+
                 }
-                setInformation();
+                setInformation()
 
             </script>
         }
