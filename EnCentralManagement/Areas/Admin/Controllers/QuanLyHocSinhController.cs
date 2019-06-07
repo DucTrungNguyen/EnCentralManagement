@@ -73,5 +73,13 @@ namespace EnCentralManagement.Areas.Admin.Controllers
             thongtinView.phuhuynh = db.PHU_HUYNH.Find(1);//db.PHU_HUYNH.Where(m=>m.ID == thongtinView.hocsinh.)
             return View("XemThongTinHocSinh", thongtinView);
         }
+
+        public ActionResult XoaHocSinh(string id)
+        {
+            HOC_SINH hs = new HOC_SINH() { ID = id };
+            db.HOC_SINH.Remove(hs);
+            db.SaveChanges();
+            return View("Index");
+        }
     }
 }

@@ -36,9 +36,9 @@ namespace EnCentralManagement.Areas.Admin.Controllers
                     ID = form["nf-email"],
                     PASS_WORD = form["nf-password"]
                 };
-                if (!form["selectLg"].ToString().Equals(""))
+                if ( !String.IsNullOrEmpty( form["selectLg"].ToString().ToString()) )
                 {
-
+                    
                 }
                 db.PHU_HUYNH.Add(ph);
                 db.SaveChanges();
