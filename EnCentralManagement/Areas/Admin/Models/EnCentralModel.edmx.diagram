@@ -4,11 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-<<<<<<< HEAD
-      <Diagram DiagramId="fa6a892d41524b458ced1234cc9ef74a" Name="Diagram1" ZoomLevel="56">
-=======
       <Diagram DiagramId="fa6a892d41524b458ced1234cc9ef74a" Name="Diagram1" ZoomLevel="74">
->>>>>>> nguyentrung
         <EntityTypeShape EntityType="EnCentralModel.GIAO_VIEN" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.HOC_SINH" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.PHONG_HOC" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />

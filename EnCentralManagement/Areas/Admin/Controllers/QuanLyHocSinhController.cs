@@ -70,7 +70,7 @@ namespace EnCentralManagement.Areas.Admin.Controllers
         {
             ThongTinHocSinhModelView thongtinView = new ThongTinHocSinhModelView();
             thongtinView.hocsinh = db.HOC_SINH.Find(id);
-            thongtinView.phuhuynh = db.PHU_HUYNH.Find(1);//db.PHU_HUYNH.Where(m=>m.ID == thongtinView.hocsinh.)
+            //thongtinView.phuhuynh = db.PHU_HUYNH.Find(1);//db.PHU_HUYNH.Where(m=>m.ID == thongtinView.hocsinh.)
             return View("XemThongTinHocSinh", thongtinView);
         }
 
