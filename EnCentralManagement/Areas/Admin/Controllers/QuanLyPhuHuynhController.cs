@@ -36,7 +36,10 @@ namespace EnCentralManagement.Areas.Admin.Controllers
                     ID = form["nf-email"],
                     PASS_WORD = form["nf-password"]
                 };
+                if (!form["selectLg"].ToString().Equals(""))
+                {
 
+                }
                 db.PHU_HUYNH.Add(ph);
                 db.SaveChanges();
                 ViewBag.idTonTai = true;
@@ -56,6 +59,7 @@ namespace EnCentralManagement.Areas.Admin.Controllers
         }
         public ActionResult XemThongTinPhuHuynh(string id)
         {
+            
             return View("XemThongTinPhuHuynh", db.PHU_HUYNH.Find(id));
         }
     }
