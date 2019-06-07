@@ -1,4 +1,6 @@
 ﻿
+@using EnCentralManagement.Areas.Admin.Models;
+@model IEnumerable<EnCentralManagement.Areas.Admin.Models.PHU_HUYNH>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutMain.cshtml";
@@ -39,48 +41,57 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tr-shadow">
-                            <td>
-                                <label class="au-checkbox">
-                                    <input type="checkbox">
-                                    <span class="au-checkmark"></span>
-                                </label>
-                            </td>
-                            <td>1</td>
-                            <td>
-                                <img src="/Assets/images/icon/avatar-06.jpg" width="40" height="40" />
-                            </td>
-                            <td>Nguyễn Văn Bình</td>
-                            <td>02-02-2000</td>
-                            <td>
-                                Nam
-                            </td>
+                        @{
+                            var n = 0;
+                            foreach (PHU_HUYNH ph in Model)
+                            {
+                                <tr class="tr-shadow">
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>@(++n)</td>
+                                    <td>
+                                        <img src="/Assets/images/icon/avatar-06.jpg" width="40" height="40" />
+                                    </td>
+                                    <td>@(ph.HO_TEN)</td>
+                                    <td>@(ph.NGAY_SINH)</td>
+                                    <td>
+                                        Nam
+                                    </td>
 
-                            <td>0169994495</td>
-                            <td>Hà Nội</td>
-                            <td>
-                                <div class="table-data-feature">
-                                    <a href="@Url.Action("XemThongTinPhuHuynh", "QuanLyPhuHuynh")" class="item" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
-                                        <i class="zmdi zmdi-view-web"></i>
-                                    </a>
-                                    <a href="@Url.Action("ThemPhuHuynh", "QuanLyPhuHuynh")" class="item" data-toggle="tooltip" data-placement="top" title="Sửa">
-                                        <i class="zmdi zmdi-edit"></i>
-                                    </a>
-                                    <button onclick="ConfirmToDelete()" class="item" data-toggle="tooltip" data-placement="top" title="Xoá">
-                                        <i class="zmdi zmdi-delete"></i>
-                                        <script>
-                                    function ConfirmToDelete() {
-                                        confirm("Bạn có chắc chắn muốn xoá không?");
-                                    }
-                                        </script>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                    <td>@(ph.SO_DIENTHOAI)</td>
+                                    <td>@(ph.DIA_CHI)</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <a href="@Url.Action("XemThongTinPhuHuynh", "QuanLyPhuHuynh", new { id = ph.ID.ToString() })" class="item" data-toggle="tooltip" data-placement="top" title="Xem chi tiết">
+                                                <i class="zmdi zmdi-view-web"></i>
+                                            </a>
+                                            <a href="@Url.Action("ThemPhuHuynh", "QuanLyPhuHuynh", new { id = ph.ID.ToString() })" class="item" data-toggle="tooltip" data-placement="top" title="Sửa">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </a>
+                                            <button onclick="ConfirmToDelete()" class="item" data-toggle="tooltip" data-placement="top" title="Xoá">
+                                                <i class="zmdi zmdi-delete"></i>
+                                                <script>
+                                                    function ConfirmToDelete() {
+                                                        confirm("Bạn có chắc chắn muốn xoá không?");
+                                                    }
+                                                </script>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        }
 
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    
 </div>

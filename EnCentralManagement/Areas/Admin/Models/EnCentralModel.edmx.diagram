@@ -4,11 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="fa6a892d41524b458ced1234cc9ef74a" Name="Diagram1" ZoomLevel="56">
+=======
+      <Diagram DiagramId="fa6a892d41524b458ced1234cc9ef74a" Name="Diagram1" ZoomLevel="74">
+>>>>>>> nguyentrung
         <EntityTypeShape EntityType="EnCentralModel.GIAO_VIEN" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.HOC_SINH" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.PHONG_HOC" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnCentralModel.PHU_HUYNH" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnCentralModel.PHU_HUYNH" Width="1.5" PointX="9.125" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.sysdiagram" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.TKB_HOCSINH" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EnCentralModel.TKB_LOP" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
@@ -17,7 +21,16 @@
         <AssociationConnector Association="EnCentralModel.FK__GIAO_VIEN__ID_TR__6E01572D" ManuallyRouted="false" />
         <AssociationConnector Association="EnCentralModel.FK__GIAO_VIEN__ID_TR__6EF57B66" ManuallyRouted="false" />
         <AssociationConnector Association="EnCentralModel.FK__TKB_HOCSI__ID_HO__0D7A0286" ManuallyRouted="false" />
-        <AssociationConnector Association="EnCentralModel.HOCSINH_PHUHUYNH" ManuallyRouted="false" />
+        <AssociationConnector Association="EnCentralModel.HOCSINH_PHUHUYNH" ManuallyRouted="true" >
+          <ConnectorPoint PointX="6.75" PointY="11.379420572916667" />
+          <ConnectorPoint PointX="7.53375" PointY="11.379420572916667" />
+          <ConnectorPoint PointX="7.53375" PointY="10.215204455820418" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="10.215204455820418" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="10.215204455820418" />
+          <ConnectorPoint PointX="8.7056289293291478" PointY="10.215204455820418" />
+          <ConnectorPoint PointX="8.7056289293291478" PointY="11.379420572916667" />
+          <ConnectorPoint PointX="9.125" PointY="11.379420572916667" />
+        </AssociationConnector>
         <EntityTypeShape EntityType="EnCentralModel.LOP_HOC" Width="1.5" PointX="5.25" PointY="2.75" />
         <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__ID_GIAO__06CD04F7" />
         <AssociationConnector Association="EnCentralModel.FK__LOP_HOC__ID_TKB__08B54D69" />
