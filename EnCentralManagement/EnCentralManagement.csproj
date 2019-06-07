@@ -138,7 +138,9 @@
       <LastGenOutput>EnCentralModel.cs</LastGenOutput>
     </Content>
     <Content Include="Assets\css\font-face.css" />
+    <Content Include="Assets\css\style.css" />
     <Content Include="Assets\css\theme.css" />
+    <Content Include="Assets\css\tkbstyle.css" />
     <Content Include="Assets\fonts\poppins\poppins-v5-latin-100.svg" />
     <Content Include="Assets\fonts\poppins\poppins-v5-latin-100italic.svg" />
     <Content Include="Assets\fonts\poppins\poppins-v5-latin-200.svg" />
@@ -172,6 +174,7 @@
     <Content Include="Assets\images\icon\logo.png" />
     <Content Include="Assets\images\icon\Untitled-1.jpg" />
     <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\util.js" />
     <Content Include="Assets\vendor\animsition\animsition.min.css" />
     <Content Include="Assets\vendor\animsition\animsition.min.js" />
     <Content Include="Assets\vendor\bootstrap-4.1\bootstrap.min.css" />
@@ -465,6 +468,8 @@
       <DependentUpon>EnCentralModel.edmx</DependentUpon>
     </Content>
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Assets\css\style.scss" />
+    <Content Include="Areas\Admin\Views\Shared\_partialViewThoiKhoaBieu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

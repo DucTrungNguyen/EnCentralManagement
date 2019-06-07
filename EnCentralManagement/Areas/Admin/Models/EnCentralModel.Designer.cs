@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Study\Môn trên lớp\HK6\ASP.NTE_MVC_Web\Code\EnCentralManagement\EnCentralManagement\Areas\Admin\Models\EnCentralModel.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Study\Môn trên lớp\HK6\ASP.NTE_MVC_Web\Code\Git\EnCentralManagement\EnCentralManagement\Areas\Admin\Models\EnCentralModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
