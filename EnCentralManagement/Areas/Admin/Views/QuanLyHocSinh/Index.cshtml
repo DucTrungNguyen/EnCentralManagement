@@ -57,9 +57,16 @@
                                         <img src="/Assets/images/icon/avatar-06.jpg" width="40" height="40" />
                                     </td>
                                     <td>@(hs.HO_TEN)</td>
-                                    <td>@(hs.NGAY_SINH)</td>
-                                    <td>
-                                        @(hs.GIOI_TINH)
+                                    <td>@(hs.NGAY_SINH.ToString().Split(' ')[0])</td>
+                                    <td id="td-sex"> 
+                                        <script>
+                                            function FunsetSex(sex) {
+                                                console.log(sex);
+                                                return toString(sex) == "0" ? "Nam" : "Nữ";
+                                            }
+                                            FunsetSex(@(hs.GIOI_TINH.ToString()));
+                                        </script>
+                                    
                                     </td>
 
                                     <td>@(hs.SO_DIENTHOAI)</td>
@@ -95,13 +102,8 @@
             </div>
         </div>
     </div>
+   
     <script>
-        function getID() {
-
-        }
-    </script>
-    <script>
-       
         $(".btn-delete").click(function () {
             let isConfirm = confirm("Bạn có chắc chắn muốn xoá không?");
             console.log(isConfirm)
@@ -110,6 +112,15 @@
                 var action = $(this).attr("data-href");// lay duong dan web chay den khi an xac nhan thanh cong
                 location.href = action;
             }
+        });
+       /* $("#td-sex").ready(function () {
+            console.log(attr)
         })
+        function FunsetSex(sex) {
+            console.log(sex);
+        }*/
     </script>
+    
+    }
+   
 </div>

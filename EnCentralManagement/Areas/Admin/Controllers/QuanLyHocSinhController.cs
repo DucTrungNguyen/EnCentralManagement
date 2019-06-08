@@ -39,7 +39,8 @@ namespace EnCentralManagement.Areas.Admin.Controllers
                     HO_TEN = form["cc-payment"],
                     DIA_CHI = form["cc-name"],
                     SO_DIENTHOAI = form["cc-number"],
-                    NGAY_SINH = DateTime.Now,
+                    NGAY_SINH = Convert.ToDateTime(form["cc-exp"].ToString()),
+                    GIOI_TINH = getSex(form["selectLg"].ToString()),
                     ID = form["nf-email"],
                     PASS_WORD = form["nf-password"]
                 };
@@ -77,9 +78,14 @@ namespace EnCentralManagement.Areas.Admin.Controllers
         public ActionResult XoaHocSinh(string id)
         {
             HOC_SINH hs = new HOC_SINH() { ID = id };
+            db.HOC_SINH.Attach(hs);
             db.HOC_SINH.Remove(hs);
             db.SaveChanges();
-            return View("Index");
+            return View("Index", db.HOC_SINH);
+        }
+        private int getSex(string sex)
+        {
+            return Int16.Parse(sex.Split(',')[1]);
         }
     }
 }

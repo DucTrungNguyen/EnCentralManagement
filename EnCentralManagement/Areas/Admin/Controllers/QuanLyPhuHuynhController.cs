@@ -32,7 +32,8 @@ namespace EnCentralManagement.Areas.Admin.Controllers
                     HO_TEN = form["cc-payment"],
                     DIA_CHI = form["cc-name"],
                     SO_DIENTHOAI = form["cc-number"],
-                    NGAY_SINH = DateTime.Now,
+                    NGAY_SINH = Convert.ToDateTime(form["cc-exp"].ToString()),
+                    GIOI_TINH = getSex(form["selectLg"].ToString()),
                     ID = form["nf-email"],
                     PASS_WORD = form["nf-password"]
                 };
@@ -61,6 +62,18 @@ namespace EnCentralManagement.Areas.Admin.Controllers
         {
             
             return View("XemThongTinPhuHuynh", db.PHU_HUYNH.Find(id));
+        }
+        public ActionResult XoaPhuHuynh(string id)
+        {
+            PHU_HUYNH ph = new PHU_HUYNH() { ID = id };
+            db.PHU_HUYNH.Attach(ph);
+            db.PHU_HUYNH.Remove(ph);
+            db.SaveChanges();
+            return View("Index", db.PHU_HUYNH);
+        }
+        private int getSex(string sex)
+        {
+            return Int16.Parse(sex.Split(',')[1]);
         }
     }
 }

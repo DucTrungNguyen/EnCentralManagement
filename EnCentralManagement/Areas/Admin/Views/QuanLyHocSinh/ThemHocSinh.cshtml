@@ -48,7 +48,7 @@
                             <div class="form-group">
                                 <label for="cc-exp" class="control-label mb-1">Ngày sinh</label>
                                 <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Nhập ngày sinh"
-                                       placeholder="YY / MM / DD"
+                                       placeholder="dd/mm/yy"
                                        autocomplete="cc-exp">
                                 <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                             </div>
@@ -162,4 +162,11 @@
             </script>
         }
     }
+    <script>
+        var date = new Date();
+        $('#cc-exp').datepicker({
+            format: 'dd/mm/yyyy'
+
+        });
+    </script>
 </div>
